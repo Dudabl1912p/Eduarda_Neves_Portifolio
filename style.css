@@ -1,0 +1,1158 @@
+* {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #F5E5EE;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+}
+
+header {
+    background-color: #000000;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 10% 30% 50% 10%;
+    height: 10vh;
+    width: 100%;
+    border-bottom: solid #F5E5EE 1px;
+    flex-wrap: wrap;
+}
+
+#logo {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    font-size: 1.3vw;
+}
+
+#logo span {
+    font-size: 1.7vw;
+    padding-bottom: 1%;
+    background-image: linear-gradient(to bottom, #F5E5EE 5%, #CD3689 95%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#menu {
+    grid-column: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #F5E5EE;
+    font-size: 1.2vw;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+    text-decoration-color: #961a60;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#switch-Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #400A28;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #CCC;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #CCC;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.my-button {
+    background-color: transparent;
+    border: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 30px;
+    float: right;
+    line-height: 70px;
+    display: none;
+}
+
+.my-button:focus {
+    outline: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 10% 45% 35% 10%;
+    grid-template-rows: 20% 70% 10%;
+    height: 100vh;
+}
+
+#inf {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#inf h1 {
+    font-size: 4vw;
+    line-height: 5vw;
+}
+
+.titulo1 {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.titulo1 span {
+    font-size: 3vw;
+    margin-left: 2%;
+    line-height: 4.7vw;
+}
+
+.gradiente {
+    background-image: linear-gradient(to top right, #F5E5EE 5%, #CD3689 95%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vazado {
+    -webkit-text-stroke: 2px #F5E5EE;
+    color: #000000;
+    font-family: "Almarai", sans-serif;
+    font-weight: 700;
+}
+
+.desc {
+    font-size: 1vw;
+    margin-top: 5%;
+    width: 85%;
+}
+
+.botao {
+    margin-top: 8%;
+
+}
+
+
+
+#btn1 {
+    font-size: 1.2vw;
+    font-weight: 400;
+    min-width: 40%;
+    min-height: 6.5vh;
+    background-color: #88255C;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+#btn1:hover {
+    background-color: #c71979;
+}
+
+#btn2 {
+    font-size: 1.2vw;
+    font-weight: 500;
+    min-width: 40%;
+    min-height: 6.5vh;
+    background-color: #DF96BE;
+    color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+#btn2:hover {
+    background-color: #ffaad9;
+}
+
+#foto {
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    background-image: url('fotos/apresentacao.png'); /* Define a imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a div */
+    background-position: center; /* Centraliza a imagem */
+    height: 100%; /* Mantém o mesmo tamanho */
+    width: 100%; /* Preenche a área da div */
+}
+
+
+.pulse {
+    transform: scale(1.02);
+    /* Aumenta o tamanho do botão */
+    transition: transform 0.3s;
+    /* Anima a transformação */
+}
+
+#sec1 {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 25% 60% 15%;
+}
+
+#sectitle {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5vw;
+    font-weight: 700;
+    background-image: linear-gradient(to top right, #F5E5EE 30%, #CD3689);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#icons {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(5, 16%);
+    column-gap: 3%;
+    row-gap: 5%;
+    justify-content: center;
+}
+
+#icon {
+    background-color: #290B1B;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 3vh;
+    font-size: 1vw;
+    text-align: center;
+    color: #FFFFFFFF;
+}
+
+#icon img {
+    width: 40%;
+    margin-bottom: 3vh;
+}
+
+#sec2 {
+    height: 85vh;
+    width: 100%;
+    background-image: url(fotos/image\ 11.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#Txt {
+    height: 70vh;
+    background-image: linear-gradient(to bottom, #A61A67, #400A28);
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr 1fr 1fr 0.5fr 0.2fr;
+    grid-template-rows: 1fr 1.5fr 0.5fr;
+}
+
+#Txt svg {
+    width: 20%;
+}
+
+#MeusP {
+    grid-column: 2/6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5vw;
+    font-weight: 700;
+    background-image: linear-gradient(to top right, #000000 25%, #CD3689);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#carroceu {
+    grid-column: 2/6;
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+#carroceu a {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+}
+
+#carroceu img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#carroceu a:first-child {
+    display: flex;
+}
+
+#svg1 {
+    grid-column: 6;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#svg2 {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#svg1,
+#svg2 {
+    cursor: pointer;
+    width: 100%;
+    /* Define a largura do contêiner */
+    height: 100%;
+    /* Define a altura do contêiner */
+}
+
+#svg1 svg,
+#svg2 svg {
+    width: 40%;
+    height: 40%;
+    fill: black;
+}
+
+#Prod {
+    background-color: #00000096;
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+#Contato {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 10% 8% 20% 8% 44%;
+}
+
+#contTitulo {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5vw;
+    font-weight: 700;
+    background-image: linear-gradient(to top right, #F5E5EE 30%, #CD3689);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contTitulo img {
+    max-height: 60%;
+}
+
+
+
+#contIcon {
+    grid-column: 2;
+    grid-row: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.ContatoICon {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F5E5EE;
+    /* Cor da bolinha */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    /* Evita que a bolinha encolha */
+}
+
+.icon-circle svg {
+    width: 30px;
+    /* Tamanho do SVG */
+    height: 30px;
+    color: #000000;
+    /* Cor do ícone */
+}
+
+.Cinf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1vw;
+    font-family: "Kadwa", serif;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+.Cinf h1 {
+    font-family: "Kadwa", serif;
+    font-weight: 700;
+    font-size: 1.2vw;
+}
+
+#contForm {
+    grid-row: 6;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+}
+
+.Map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+
+label {
+    align-items: left;
+    font-size: 1vw;
+}
+
+
+input,
+textarea {
+    max-width: 100%;
+    padding: 10px;
+    font-size: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+#men {
+    height: 100%;
+    margin-top: 20%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+form button {
+    grid-column: span 2;
+    padding: 10px;
+    background-color: #DF96BE;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #87255B;
+    color: #ffffff;
+}
+
+#vazio {
+    width: 100%;
+    height: 15vh;
+}
+
+footer {
+    position: relative;
+    background-color: #290B1B;
+    height: 20vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 50% 30% 10%;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+#links {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#links p {
+    margin: 5px 0;
+}
+
+.l {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+    min-width: 13%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.l button {
+    padding: 10px 20px;
+    background-color: #87255B;
+    border-radius: 5px;
+    height: 2.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+
+}
+
+.l a {
+    width: 100%;
+    text-decoration: none;
+}
+
+#links button:hover {
+    background-color: #a82d71;
+}
+
+#FIcon {
+    grid-row: 2;
+    grid-column: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+
+}
+
+#FIcon a svg {
+    width: 30px;
+    height: 30px;
+    fill: #ffffff;
+    transition: fill 0.3s ease;
+}
+
+#FIcon a:hover svg {
+    fill: #a82d71;
+}
+
+.dark-mode * {
+    background-color: #FFFFFF;
+    color: #290B1B;
+}
+
+
+.dark-mode main h1 {
+    color: #1A0A13;
+}
+
+.dark-mode .vazado {
+    -webkit-text-stroke: 3px #1A0A13;
+    color: #FFFFFF;
+    background-color: transparent;
+}
+
+.dark-mode #btn1 {
+    background-color: #DF96BE;
+}
+
+.dark-mode #btn2 {
+    background-color: #87255B;
+    color: #FFFFFF;
+}
+
+.dark-mode .gradiente {
+    background-image: linear-gradient(to top right, #290B1B 2%, #CD3689);
+}
+
+.dark-mode header {
+    border-bottom: solid #87255B 1px;
+}
+
+.dark-mode #menu a {
+    color: #1A0A13;
+}
+
+.dark-mode #logo span {
+    background-image: linear-gradient(to bottom, #290B1B 5%, #CD3689 95%);
+}
+
+.dark-mode #sectitle {
+    background-image: linear-gradient(to bottom, #290B1B 5%, #CD3689 95%);
+}
+
+.dark-mode #Txt {
+    background-image: linear-gradient(to bottom, #A61A67, #F5E5EE);
+}
+
+.dark-mode #MeusP {
+    background-image: linear-gradient(to top right, #F5E5EE 25%, #CD3689);
+}
+
+.dark-mode #carroceu {
+    background-color: transparent;
+}
+
+.dark-mode #svg1,
+#svg2 {
+    background-color: transparent;
+}
+
+.dark-mode #svg1 svg {
+    background-color: transparent;
+    fill: #FFFFFF;
+}
+
+.dark-mode #svg2 svg {
+    background-color: transparent;
+    fill: #FFFFFF;
+}
+
+.dark-mode #icon {
+    background-color: #F5E5EE;
+    color: #000000;
+}
+
+.dark-mode #icon img {
+    background: #F5E5EE;
+}
+
+.dark-mode #contTitulo {
+    background-image: linear-gradient(to top right, #000000 5%, #CD3689);
+}
+
+.dark-mode .icon-circle {
+    background-color: #000000;
+}
+
+.dark-mode .icon-circle svg {
+    fill: #F5E5EE;
+    background: #000000;
+}
+
+.dark-mode form button {
+    background-color: #88255C;
+    color: #ffffff;
+}
+
+.dark-mode form button:hover {
+    background-color: #af3678;
+    color: #000000;
+}
+
+.dark-mode footer {
+    background-color: #DF96BE;
+}
+
+.dark-mode footer button {
+    color: #FFFFFF;
+    background-color: #CD3689;
+}
+
+.dark-mode footer button:hover {
+    color: #000000;
+    background-color: #87255B;
+}
+
+.dark-mode #links {
+    background-color: #DF96BE;
+}
+
+.dark-mode .l {
+    background-color: #DF96BE;
+}
+
+.dark-mode .l a {
+    background-color: #DF96BE;
+}
+
+.dark-mode .l p {
+    background-color: #DF96BE;
+}
+
+.dark-mode #FIcon {
+    background-color: #DF96BE;
+}
+
+.dark-mode #FIcon svg {
+    background-color: #DF96BE;
+}
+
+.dark-mode #FIcon a {
+    background-color: #DF96BE;
+}
+
+.dark-mode #FIcon svg {
+    fill: #000000;
+}
+
+
+@media (max-width: 850px) {
+    header {
+        grid-template-columns: 10% 40% 10% 25% 5% 10%;
+    }
+
+    #logo {
+        font-size: 3vw;
+        height: 9.8vh;
+    }
+
+    #logo span {
+        font-size: 3.4vw;
+    }
+
+    header #menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ca88ac;
+        grid-column: 4/6;
+    }
+
+    .dark-mode header #menu a{
+        background-color: #ca88ac;
+    } 
+    #menu a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5vh;
+        border-bottom: #000000 solid 1px;
+        font-size: 2vw;
+    }
+
+    #switch-Container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5vh;
+        background-color: #ca88ac;
+    }
+    .switch{
+        background-color: #ca88ac;
+    }
+
+    header #menu.show {
+        display: flex;
+    }
+
+    .my-button {
+        display: block;
+        grid-column: 5;
+        height: 9vh;
+    }
+
+    main {
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 15% 40% 4% 37% 5%;
+        height: 150vh;
+    }
+
+    #inf {
+        grid-row: 4;
+    }
+
+    #inf h1 {
+        font-size: 6vw;
+        line-height: 7vw;
+
+    }
+
+    .titulo1 span {
+        font-size: 5vw;
+        line-height: 6.7vw;
+    }
+
+    .vazado {
+        font-size: 7vw;
+        -webkit-text-stroke: 1px #1A0A13;
+    }
+
+    .desc {
+        font-size: 2vw;
+        width: 100%;
+    }
+
+    #btn1,
+    #btn2 {
+        font-size: 2.5vw;
+        width: 48%;
+    }
+
+    #foto {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #sec1 {
+        height: 200vh;
+        grid-template-rows: 10% 80% 10%;
+    }
+
+    #sectitle {
+        font-size: 8vw;
+    }
+
+    #icons {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3%;
+        row-gap: 2%;
+    }
+
+    #icon {
+        font-size: 2.5vw;
+    }
+
+    #icon img {
+        width: 40%;
+        margin-bottom: 3vh;
+    }
+
+    #Contato {
+        height: 180vh;
+        grid-template-rows: 5% 10% 5% 20% 5% 55%;
+    }
+
+    #contTitulo {
+        font-size: 8vw;
+    }
+
+    .Cinf {
+        font-size: 2.5vw;
+    }
+
+    .Cinf h1 {
+        font-size: 2.7vw;
+    }
+
+    #contForm {
+        grid-row: 6;
+        grid-column: 2;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 2%;
+    }
+
+    label {
+        font-size: 2.2vw;
+    }
+
+    input,
+    textarea {
+        font-size: 2.2vw;
+    }
+
+    form button {
+        font-size: 2.2vw;
+    }
+
+    footer {
+        height: 40vh;
+    }
+
+    #links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .l {
+
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .l button {
+        width: 50%;
+    }
+
+    #FIcon {
+        flex-direction: column;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 20px;
+
+    }
+
+    #sec2 {
+        height: 70vh;
+    }
+
+    #Txt {
+        height: 55vh;
+        background-image: linear-gradient(to bottom, #A61A67, #400A28);
+        display: grid;
+        grid-template-columns: 0.2fr 0.5fr 1fr 1fr 0.5fr 0.2fr;
+        grid-template-rows: 1fr 1.5fr 0.5fr;
+    }
+
+    #carroceu {
+        justify-content: center;
+        overflow: hidden;
+        /* Oculta as imagens fora da área visível */
+    }
+
+    #carroceu a {
+        flex: 0 0 90%;
+
+    }
+
+    #svg1 svg,
+    #svg2 svg {
+        width: 50%;
+        height: 50%;
+
+    }
+
+    #MeusP {
+        font-size: 8vw;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    #menu a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 6vh;
+        border-bottom: #000000 solid 1px;
+        font-size: 3vw;
+    }
+
+    #logo {
+        font-size: 3.8vw;
+    }
+
+    #logo span {
+        font-size: 4.2vw;
+    }
+
+
+    #inf h1 {
+        font-size: 7vw;
+        line-height: 7.2vw;
+
+    }
+
+    .titulo1 span {
+        font-size: 6vw;
+        line-height: 6.9vw;
+    }
+
+    .vazado {
+        font-size: 8vw;
+        -webkit-text-stroke: 0.5px #F5E5EE;
+    }
+
+    .desc {
+        font-size: 3vw;
+
+    }
+
+    #btn1,
+    #btn2 {
+        font-size: 3vw;
+        width: 48%;
+    }
+
+    #icons {
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr 1fr;
+        gap: 3%;
+        row-gap: 2%;
+    }
+
+    #icon {
+        font-size: 3vw;
+    }
+
+    #Contato {
+        height: 200vh;
+        grid-template-rows: 2% 5% 2% 35% 4% 52%;
+    }
+
+    #contTitulo {
+        font-size: 11vw;
+    }
+
+    .Cinf {
+        font-size: 3vw;
+    }
+
+    .Cinf h1 {
+        font-size: 3.2vw;
+    }
+
+    label {
+        font-size: 3vw;
+    }
+
+    input,
+    textarea {
+        font-size: 3vw;
+    }
+
+    form button {
+        font-size: 3vw;
+    }
+
+    #svg1 svg,
+    #svg2 svg {
+        width: 80%;
+        height: 80%;
+
+    }
+}
+
+@media (max-width: 300px) {
+    #sec1 {
+        height: 150vh;
+        grid-template-rows: 10% 80% 10%;
+    }
+
+    #icon {
+        font-size: 3.5vw;
+    }
+
+    header #menu {
+        grid-column: 4/7;
+    }
+
+    #menu a {
+        font-size: 3vw;
+    }
+
+    main {
+
+        height: 110vh;
+    }
+
+    label {
+        font-size: 3.7vw;
+    }
+
+    input,
+    textarea {
+        font-size: 3.7vw;
+    }
+
+    form button {
+        font-size: 3.7vw;
+    }
+
+    .Cinf {
+        font-size: 3.5vw;
+    }
+
+    .Cinf h1 {
+        font-size: 3.7vw;
+    }
+
+}
